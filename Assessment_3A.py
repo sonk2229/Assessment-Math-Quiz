@@ -4,15 +4,16 @@ import random
 # to simulate a question
 
 
-def random_num():
-    random_result = random.randint(1, 10)
-    return random_result
+def roll_random():
+    roll_result = random.randint(1, 10)
+    return roll_result
 
 
-# generates two random numbers and gives both of them
+# rolls two random numbers and returns total
 
-def two_random_num(who):
+    # roll two random
+    random_1 = roll_random()
+    random_2 = roll_random()
 
-#rolls  two random numbers
-roll_1 = random_num()
-roll_2 = random_num()
+    # Show the user the result
+    print(f"{who}: {random_1} & {random_2}")

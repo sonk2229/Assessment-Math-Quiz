@@ -57,7 +57,7 @@ while Questions_played < num_Questions:
     print()
 
     # get user choice
-    user_choice = input("Choose: ")
+    user_choice = input("Answer: ")
 
     # If user choice os the exit code, break the loop
     if user_choice == "xxx":
