@@ -11,9 +11,10 @@ def roll_random():
 
 # rolls two random numbers and returns total
 
-    # roll two random
-    random_1 = roll_random()
-    random_2 = roll_random()
+# roll two random
+random_1 = roll_random()
+random_2 = roll_random()
 
-    # Show the user the result
-    print(f"{who}: {random_1} & {random_2}")
+# Then + the ramdom_1 & random_2 then give  random_1 + random_2 after user gives response
+print(f":{random_1} + {random_2} = {random_1 + random_2} ")
+
