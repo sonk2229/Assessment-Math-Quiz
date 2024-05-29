@@ -79,9 +79,10 @@ while Questions_played < num_Questions:
     # get user choice
     user_choice = input("Answer: ")
 
-    # if user_choice is the same as random_1 + random_2 give user You got it right
-    user_choice = {random_1 + random_2}
     print(f" {random_1} + {random_2} = {random_1 + random_2} ")
+
+    user_choice = ""
+    if user_choice : (f"{ random_1 + random_2} ")
 
     # If user choice os the exit code, break the loop
     if user_choice == "xxx":
