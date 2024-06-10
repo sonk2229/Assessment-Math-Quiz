@@ -16,7 +16,6 @@ def int_check(question):
             response = int(to_check)
 
         # checks that the number is more than / equal to 1
-
             if response < 1:
                 print(error)
             else:
@@ -46,7 +45,7 @@ def string_checker(question, valid_ans=("yes", "no")):
 
     while True:
 
-        # Get user response and amke sure it's lowercase
+        # Get user response and make sure it's lowercase
         user_response = input(question).lower()
 
         for item in valid_ans:
@@ -127,16 +126,16 @@ while Questions_played < num_Questions:
     # to simulate a question
 
 
-    def roll_random():
-        roll_result = random.randint(1, 10)
-        return roll_result
+    def gen_number():
+        gen_result = random.randint(1, 10)
+        return gen_result
 
 
     # rolls two random numbers and returns total
 
     # roll two random
-    random_1 = roll_random()
-    random_2 = roll_random()
+    random_1 = gen_number()
+    random_2 = gen_number()
 
     # Then + the ramdom_1 & random_2 then give random_1 + random_2 after user gives response
     print(f" {random_1} + {random_2} ")
@@ -146,15 +145,15 @@ while Questions_played < num_Questions:
 
     print(f" {random_1} + {random_2} = {random_1 + random_2} ")
 
-    if user_choice == random_1 + random_2:
-        print("you got this correct")
-
-    elif user_choice == random_1 + random_2:
-        print("you got this incorrect ")
-
     # If user choice os the exit code, break the loop
     if user_choice == "xxx":
         break
+
+    if user_choice == random_1 + random_2:
+        print("you got this correct")
+     
+        if user_choice > random_1 + random_2:
+            print("you got this incorrect ")
 
     Questions_played += 1
 
@@ -163,6 +162,6 @@ while Questions_played < num_Questions:
         num_Questions += 1
 
 
-# Game loop ends here
+# Quiz loop ends here
 
-# Game History / Statistics area
+# Quiz History / Statistics area
