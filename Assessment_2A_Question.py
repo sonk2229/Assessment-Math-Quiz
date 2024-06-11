@@ -8,6 +8,9 @@ def int_check(question):
 
         to_check = input(question)
 
+        if to_check == "xxx":
+            return
+
         # Check for infinite mode
         if to_check == "":
             return "infinite"
