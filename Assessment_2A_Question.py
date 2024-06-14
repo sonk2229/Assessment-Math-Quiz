@@ -9,7 +9,7 @@ def int_check(question):
         to_check = input(question)
 
         if to_check == "xxx":
-            break
+            return "xxx"
 
         # Check for infinite mode
         if to_check == "":
@@ -154,9 +154,8 @@ while Questions_played < num_Questions:
 
     if user_choice == random_1 + random_2:
         print("you got this correct")
-     
-        if user_choice > random_1 + random_2:
-            print("you got this incorrect ")
+    else:
+        print("you get this incorrect ")
 
     Questions_played += 1
 
