@@ -33,8 +33,10 @@ def int_check(question):
 # Intialise game variables
 mode = "regular"
 Questions_played = 0
+Questions_right = 0
+Questions_wrong = 0
 
-
+quiz_history = []
 print("Math Quiz")
 print()
 
@@ -155,7 +157,12 @@ while Questions_played < num_Questions:
     if user_choice == random_1 + random_2:
         print("you got this correct")
     else:
-        print("you get this incorrect ")
+        print("you got this incorrect ")
+    result = user_choice
+    if result == "you got this correct":
+        Questions_right += 1
+    else:
+        Questions_wrong += 1
 
     Questions_played += 1
 
@@ -167,3 +174,28 @@ while Questions_played < num_Questions:
 # Quiz loop ends here
 
 # Quiz History / Statistics area
+Question_feedback = f"{Questions_played} "
+history_item = f"Question: {Questions_played + 1} - {Question_feedback}"
+
+print(Question_feedback)
+quiz_history.append(history_item)
+
+if Questions_played > 0:
+    # calculate Statistics
+    Questions_right = Questions_played - Questions_wrong
+    percent_right = Questions_right / Questions_played * 100
+    percent_wrong = Questions_wrong / Questions_played * 100
+
+    # Output Game Statistics
+    print("Game Statistics")
+    print(f" Won: {percent_right:.2f} \t"
+          f" Lost: {percent_wrong:.2f} \t")
+
+# ask user if they want to see their game history and output it if requested.
+see_history = string_checker("\nDo you want to see your quiz history? ")
+if see_history == "yes":
+    for item in quiz_history:
+        print(item)
+
+print()
+print("Thanks for playing. ")
