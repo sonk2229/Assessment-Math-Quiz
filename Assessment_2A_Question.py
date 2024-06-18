@@ -153,16 +153,21 @@ while Questions_played < num_Questions:
     # If user choice os the exit code, break the loop
     if user_choice == "xxx":
         break
-
     if user_choice == random_1 + random_2:
         print("you got this correct")
     else:
         print("you got this incorrect ")
     result = user_choice
-    if result == "you got this correct":
+    if result == user_choice == random_1 + random_2:
         Questions_right += 1
     else:
         Questions_wrong += 1
+
+    Question_feedback = f"{Questions_played} "
+    history_item = f"Question: {Questions_played + 1} = {user_choice}"
+
+    print(Question_feedback)
+    quiz_history.append(history_item)
 
     Questions_played += 1
 
@@ -174,11 +179,6 @@ while Questions_played < num_Questions:
 # Quiz loop ends here
 
 # Quiz History / Statistics area
-Question_feedback = f"{Questions_played} "
-history_item = f"Question: {Questions_played + 1} - {Question_feedback}"
-
-print(Question_feedback)
-quiz_history.append(history_item)
 
 if Questions_played > 0:
     # calculate Statistics
